@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">User Profile</string>
+    <string name="title_Text">Sistema de registro</string>
+    <string name="user_name_hint">Nombre de usuario</string>
+    <string name="user_gmail_hint">Correo electrónico</string>
+    <string name="help_Text_email">La dirección debe contener al menos 1 @</string>
+    <string name="user_password_hint">Contraseña</string>
+    <string name="help_Text_password">La clave debe tener al menos un número</string>
+    <string name="user_URL_hint">Dirección de la foto</string>
+    <string name="age_help_text">Edad</string>
+    <string name="user_age_hint">Edad</string>
+    <string name="text_male">Hombre</string>
+    <string name="text_female">Mujer</string>
+    <string name="gender_text">Género</string>
+    <string name="text_other">Otro</string>
+    <string name="cb_text">He comprado VIP</string>
+    <string name="FAB_descp">Este botón te lleva al perfil creado</string>
+    <string name="msg_error_profile">Debes completar la información de forma correcta</string>
+    <string name="error_empty_et">Debes de llenar el campo.</string>
+    <string name="error_invalid_email">El email introducido es inválido</string>
+    <string name="text_empty_error">Debes de llenar el campo</string>
+    <string name="invalid_URL">La URL es inválida.</string>
+    <string name="msg_error_activity">La información introducida no es válida</string>
+    <string name="error_password_et">La contraseña debe contener al menos un número.</string>
+</resources>

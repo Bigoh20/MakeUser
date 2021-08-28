@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_margin"
+        tools:context=".NewUser">
+
+        <TextView
+            android:id="@+id/tv_Title"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_32dp"
+            android:background="@drawable/style_border"
+            android:drawablePadding="10sp"
+            android:text="@string/title_Text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_UserName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:hint="@string/user_name_hint"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Title"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIET_UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="15"
+                android:textSize="20sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_UserGmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:hint="@string/user_gmail_hint"
+            app:endIconMode="clear_text"
+            app:helperText="@string/help_Text_email"
+            app:helperTextTextColor="@color/light_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TIL_UserName"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIET_UserGmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_UserPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:hint="@string/user_password_hint"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:endIconMode="password_toggle"
+            app:helperText="@string/help_Text_password"
+            app:helperTextTextColor="@color/light_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TIL_UserGmail"
+            app:startIconDrawable="@drawable/ic_password_key">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIET_UserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/default_margin_32dp"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TIL_UserPassword" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_UserURL"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:hint="@string/user_URL_hint"
+            android:textColorHint="@color/purple_200"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/light_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:startIconDrawable="@drawable/ic_link">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIET_UserURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/small_margin_16dp"
+            android:layout_marginTop="@dimen/default_margin_32dp"
+            android:layout_marginEnd="@dimen/small_margin_16dp"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="@id/TIL_UserURL"
+            app:layout_constraintStart_toStartOf="@id/TIL_UserURL"
+            app:layout_constraintTop_toBottomOf="@+id/TIL_UserURL" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TIL_UserAge"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/small_width_editText"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_32dp"
+            android:hint="@string/user_age_hint"
+            app:counterEnabled="true"
+            app:counterMaxLength="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:startIconDrawable="@drawable/ic_security">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TIET_UserAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tv_gender"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            app:layout_constraintEnd_toEndOf="@+id/TIL_UserAge"
+            app:layout_constraintStart_toStartOf="@+id/TIL_UserAge"
+            app:layout_constraintTop_toBottomOf="@id/TIL_UserAge"
+            android:text="@string/gender_text"
+            android:textColor="@color/purple_700"/>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/RG_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/tv_gender"
+            app:layout_constraintStart_toStartOf="@id/tv_gender"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender"
+            app:singleSelection="true">
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/RB_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:text="@string/text_male"
+                android:padding="10dp" />
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/RB_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:text="@string/text_female"
+                android:padding="10dp"/>
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/RB_other"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:text="@string/text_other"
+                android:padding="10dp"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+        <CheckBox
+            android:id="@+id/VIP_CB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_32dp"
+            android:text="@string/cb_text"
+            app:layout_constraintEnd_toEndOf="@id/RG_gender"
+            app:layout_constraintStart_toStartOf="@id/RG_gender"
+            app:layout_constraintTop_toBottomOf="@id/RG_gender" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_16dp"
+            android:backgroundTint="@color/gold_color"
+            android:contentDescription="@string/FAB_descp"
+            android:src="@drawable/ic_check"
+            app:layout_constraintEnd_toEndOf="@id/VIP_CB"
+            app:layout_constraintStart_toStartOf="@id/VIP_CB"
+            app:layout_constraintTop_toBottomOf="@id/VIP_CB" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
